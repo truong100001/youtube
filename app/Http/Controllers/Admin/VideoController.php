@@ -208,10 +208,10 @@ class VideoController extends Controller
                 array_push($where,[$key,'=',$value]);
             }
         }
-
+        $noLink = 1;
         $num_result = DB::table('detail_video')->where($where)->count();
         $videos = DB::table('detail_video')->where($where)->get();
-        return view('pages.video',compact('videos','num_result'));
+        return view('pages.video',compact('videos','num_result','noLink'));
     }
 
 

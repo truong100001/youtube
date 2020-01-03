@@ -98,7 +98,9 @@
                                 </tbody>
                                 @endforeach
                             </table>
-
+                            @if(!isset($noLink))
+                            {{$videos->links()}}
+                            @endif
                         </div>
                         <!-- END DATA TABLE -->
                     </div>
